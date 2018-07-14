@@ -28,8 +28,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:inputType="textPassword"
         android:hint="password"
-        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginEmailTxt" />
@@ -75,4 +75,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 </android.support.constraint.ConstraintLayout>
