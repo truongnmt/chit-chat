@@ -55,7 +55,7 @@ class CreateUserActivity : AppCompatActivity() {
     }
 
     fun createUserClicked(view: View) {
-        enableSinpper(true)
+        enableSpinner(true)
         val userName = createUserNameText.text.toString()
         val email= createEmailText.text.toString()
         val password = createPasswordText.text.toString()
@@ -70,7 +70,7 @@ class CreateUserActivity : AppCompatActivity() {
                                 if (createSuccess) {
                                     val userDataChange = Intent(BROADCAST_USER_DATA_CHANGE)
                                     LocalBroadcastManager.getInstance(this).sendBroadcast(userDataChange)
-                                    enableSinpper(false)
+                                    enableSpinner(false)
                                     finish()
                                 } else {
                                     errorToast()
@@ -87,17 +87,17 @@ class CreateUserActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Make sure user name, email and password are filled in.",
                     Toast.LENGTH_LONG).show()
-            enableSinpper(false)
+            enableSpinner(false)
         }
     }
 
     fun errorToast() {
         Toast.makeText(this, "Something went wrong, please try again.",
                 Toast.LENGTH_LONG).show()
-        enableSinpper(false)
+        enableSpinner(false)
     }
 
-    fun enableSinpper(enable: Boolean) {
+    fun enableSpinner(enable: Boolean) {
         if (enable) {
             createSpinner.visibility = View.VISIBLE;
         } else {
